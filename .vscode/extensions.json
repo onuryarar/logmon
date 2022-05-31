@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "iljapostnovs.ui5plugin",
+        "DotJoshJohnson.xml"
+    ]
+}

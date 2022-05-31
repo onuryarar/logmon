@@ -1,0 +1,94 @@
+{
+    "_version": "1.32.0",
+    "sap.app": {
+        "id": "logmon",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.102.1",
+            "libs": {
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "logmon.i18n.i18n"
+                }
+            },
+            "": {
+                "type": "sap.ui.model.json.JSONModel"
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/styles.css"
+                }
+            ]
+        },
+        "rootView": {
+            "viewName": "logmon.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "logmon.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteApp",
+                    "pattern": "RouteApp",
+                    "target": [
+                        "TargetApp"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetApp": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "App",
+                    "viewName": "App"
+                }
+            }
+        }
+    }
+}

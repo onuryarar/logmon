@@ -1,0 +1,22 @@
+{
+    "name": "logmon",
+    "version": "0.0.1",
+    "private": true,
+    "description": "UI5 Log Monitoring",
+    "main": "webapp/index.html",
+    "scripts": {
+        "start": "ui5 serve --open 'index.html'",
+        "lint": "eslint webapp",
+        "unit-tests": "ui5 serve --open test/unit/unitTests.qunit.html",
+        "int-tests": "ui5 serve --open test/integration/opaTests.qunit.html",
+        "build": "ui5 build -a --clean-dest",
+        "build-self-contained": "ui5 build self-contained -a --clean-dest",
+        "serve-dist": "ws --compress -d dist"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@ui5/cli": "^2.12.0",
+        "eslint": "^8.16.0",
+        "local-web-server": "^5.2.1"
+    }
+}
