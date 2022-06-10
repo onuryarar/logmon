@@ -69,24 +69,30 @@
                 "viewPath": "logmon.view",
                 "controlAggregation": "pages",
                 "controlId": "app",
-                "clearControlAggregation": false
+                "clearControlAggregation": false,
+                "transition": "slide",
+                "bypassed": {
+                    "target": "NotFound"
+                }
             },
             "routes": [
                 {
-                    "name": "RouteApp",
-                    "pattern": "RouteApp",
+                    "pattern": "",
+                    "name": "App",
                     "target": [
-                        "TargetApp"
+                        "App"
                     ]
                 }
             ],
             "targets": {
-                "TargetApp": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
+                "App": {
                     "viewId": "App",
                     "viewName": "App"
+                },
+                "NotFound": {
+                    "viewId": "NotFound",
+                    "viewName": "NotFound",
+                    "transition": "show"
                 }
             }
         }
